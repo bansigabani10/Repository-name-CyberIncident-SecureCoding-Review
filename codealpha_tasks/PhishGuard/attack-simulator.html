@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Attack Simulator | PhishGuard</title>
+
+    <!-- Your existing CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Phase 7 CSS -->
+    <link rel="stylesheet" href="css/attack-simulator.css">
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <div class="logo">
+        🛡️ <span>PhishGuard</span>
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="index.html#training">Training</a>
+        <a href="attack-simulator.html" class="active-link">
+            Simulator
+        </a>
+    </nav>
+
+</header>
+
+
+<main class="simulator-page">
+
+    <!-- HERO -->
+
+    <section class="sim-hero">
+
+        <div>
+
+            <span class="eyebrow">
+                PHASE 7 · PRACTICAL TRAINING
+            </span>
+
+            <h1>
+                Phishing
+                <span>Attack Simulator</span>
+            </h1>
+
+            <p>
+                Make decisions in realistic phishing and
+                social-engineering situations. Your decisions
+                are scored and saved for the Human Risk Engine.
+            </p>
+
+        </div>
+
+
+        <div class="sim-status">
+
+            <div class="status-label">
+                SESSION RISK
+            </div>
+
+            <strong id="riskScore">
+                50
+            </strong>
+
+            <span id="riskLevel">
+                MODERATE
+            </span>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- SIMULATOR -->
+
+    <section class="sim-shell">
+
+
+        <!-- SIDEBAR -->
+
+        <aside class="scenario-sidebar">
+
+            <div class="sidebar-title">
+                ATTACK SCENARIOS
+            </div>
+
+            <div id="scenarioList"></div>
+
+
+            <div class="progress-box">
+
+                <div class="progress-label">
+
+                    <span>
+                        Session Progress
+                    </span>
+
+                    <span id="progressText">
+                        0 / 5
+                    </span>
+
+                </div>
+
+
+                <div class="progress-track">
+
+                    <div id="progressBar"></div>
+
+                </div>
+
+            </div>
+
+        </aside>
+
+
+
+        <!-- MAIN SCENARIO -->
+
+        <section class="scenario-panel">
+
+            <div id="scenarioContent"></div>
+
+        </section>
+
+    </section>
+
+
+
+    <!-- PHASE 8 PREVIEW -->
+
+    <section class="dna-preview">
+
+        <div>
+
+            <span class="eyebrow">
+                DATA READY FOR PHASE 8
+            </span>
+
+            <h2>
+                Your Attack DNA is being recorded
+            </h2>
+
+            <p>
+                Every decision is associated with the
+                social-engineering technique used by the
+                attacker. These results will later be used
+                by the Human Risk Engine.
+            </p>
+
+        </div>
+
+
+        <div class="dna-chips">
+
+            <span>Fear</span>
+            <span>Urgency</span>
+            <span>Authority</span>
+            <span>Curiosity</span>
+            <span>Reward</span>
+            <span>Trust</span>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+
+<footer>
+
+    <div class="logo">
+        🛡️ PhishGuard
+    </div>
+
+    <p>
+        Practical Phishing Awareness Training
+    </p>
+
+    <p class="copyright">
+        © 2026 PhishGuard | Cybersecurity Awareness Project
+    </p>
+
+</footer>
+
+
+
+<!-- Phase 7 JavaScript -->
+<!-- Human Risk Engine -->
+<script src="js/human-risk-engine.js"></script>
+
+<!-- Phase 7 + Phase 8.3 Attack Simulator -->
+<script src="js/attack-simulator.js"></script>
+</body>
+</html>

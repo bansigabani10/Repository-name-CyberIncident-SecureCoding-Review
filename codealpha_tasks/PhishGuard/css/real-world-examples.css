@@ -1,0 +1,535 @@
+/* =====================================
+   REAL-WORLD CASE STUDIES
+===================================== */
+
+
+.cases-container {
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 50px 6% 100px;
+}
+
+
+/* Case Navigation */
+
+.case-navigation {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 12px;
+
+    margin-bottom: 25px;
+}
+
+.case-tab {
+
+    padding: 16px 10px;
+
+    background: #0c1c2d;
+
+    border: 1px solid #243f56;
+
+    border-radius: 9px;
+
+    color: #9eb2c5;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+
+    font-size: 13px;
+}
+
+.case-tab:hover {
+
+    border-color: #4da6ff;
+
+    transform: translateY(-2px);
+}
+
+.case-tab.active {
+
+    background: #123453;
+
+    border-color: #4da6ff;
+
+    color: white;
+}
+
+.case-tab span {
+
+    display: block;
+
+    margin-top: 7px;
+}
+
+
+/* Case Study */
+
+.case-study {
+
+    background: #0c1c2d;
+
+    border: 1px solid #23415b;
+
+    border-radius: 16px;
+
+    padding: 35px;
+
+    box-shadow:
+        0 20px 60px
+        rgba(0, 0, 0, 0.25);
+}
+
+
+/* Header */
+
+.case-header {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding-bottom: 30px;
+
+    border-bottom: 1px solid #233d54;
+
+    margin-bottom: 30px;
+}
+
+.case-number {
+
+    position: absolute;
+
+    opacity: 0;
+
+    pointer-events: none;
+}
+
+.case-icon {
+
+    width: 70px;
+
+    height: 70px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #102d46;
+
+    border: 1px solid #2d5270;
+
+    border-radius: 15px;
+
+    font-size: 35px;
+}
+
+.case-category {
+
+    color: #4da6ff;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 6px;
+}
+
+.case-header h2 {
+
+    margin: 0;
+
+    font-size: 27px;
+}
+
+
+/* Sections */
+
+.case-section {
+
+    margin-bottom: 35px;
+}
+
+.section-heading {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 15px;
+}
+
+.section-heading span {
+
+    width: 30px;
+
+    height: 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #15344d;
+
+    color: #4da6ff;
+
+    border-radius: 6px;
+
+    font-size: 12px;
+
+    font-weight: bold;
+}
+
+.section-heading h3 {
+
+    margin: 0;
+
+    font-size: 19px;
+}
+
+.case-section > p {
+
+    color: #aebdca;
+
+    line-height: 1.8;
+
+    font-size: 15px;
+}
+
+
+/* Technique */
+
+.technique-box {
+
+    padding: 22px;
+
+    background: #10283e;
+
+    border-left: 4px solid #4da6ff;
+
+    border-radius: 8px;
+}
+
+.technique-title {
+
+    color: #70baff;
+
+    font-weight: bold;
+
+    margin-bottom: 10px;
+}
+
+.technique-box p {
+
+    color: #aebdca;
+
+    line-height: 1.7;
+
+    font-size: 14px;
+}
+
+
+/* Warning Signs */
+
+.warning-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 12px;
+}
+
+.warning-item {
+
+    padding: 16px;
+
+    background: #151f2b;
+
+    border: 1px solid #304355;
+
+    border-radius: 8px;
+
+    color: #b6c5d1;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+.warning-item::before {
+
+    content: "⚠️";
+
+    margin-right: 8px;
+}
+
+
+/* Action */
+
+.action-box {
+
+    padding: 22px;
+
+    background: #10352d;
+
+    border: 1px solid #28735c;
+
+    border-radius: 9px;
+
+    color: #b8e7d7;
+
+    line-height: 1.7;
+
+    font-size: 14px;
+}
+
+.action-box strong {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #70e0ba;
+}
+
+
+/* Knowledge Check */
+
+.knowledge-check {
+
+    margin-top: 40px;
+
+    padding: 25px;
+
+    background: #111f2d;
+
+    border: 1px solid #2a465d;
+
+    border-radius: 12px;
+}
+
+.check-label {
+
+    color: #4da6ff;
+
+    letter-spacing: 2px;
+
+    font-size: 10px;
+
+    margin-bottom: 12px;
+}
+
+.knowledge-check h3 {
+
+    font-size: 18px;
+
+    line-height: 1.5;
+
+    margin-bottom: 20px;
+}
+
+.check-options {
+
+    display: grid;
+
+    gap: 10px;
+}
+
+.check-option {
+
+    padding: 15px;
+
+    background: #0c1c2d;
+
+    border: 1px solid #2b465e;
+
+    border-radius: 7px;
+
+    color: #b8c7d3;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.check-option:hover {
+
+    border-color: #4da6ff;
+}
+
+.check-option.correct {
+
+    background: #123c31;
+
+    border-color: #48c78e;
+
+    color: #a8efd1;
+}
+
+.check-option.wrong {
+
+    background: #40232a;
+
+    border-color: #df606b;
+
+    color: #ffb8bd;
+}
+
+.check-option.disabled {
+
+    pointer-events: none;
+}
+
+
+/* Feedback */
+
+.check-feedback {
+
+    display: none;
+
+    margin-top: 15px;
+
+    padding: 15px;
+
+    border-radius: 7px;
+
+    color: #bdcad5;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+.check-feedback.show {
+
+    display: block;
+}
+
+.check-feedback.correct-feedback {
+
+    background: #123c31;
+
+    border: 1px solid #28735c;
+}
+
+.check-feedback.wrong-feedback {
+
+    background: #40232a;
+
+    border: 1px solid #a94b57;
+}
+
+
+/* Source */
+
+.case-source {
+
+    margin-top: 25px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #243b51;
+
+    color: #71879b;
+
+    font-size: 11px;
+
+    line-height: 1.6;
+}
+
+
+/* Progress */
+
+.case-progress {
+
+    margin-top: 25px;
+}
+
+.case-progress > span {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #8399ac;
+
+    font-size: 12px;
+}
+
+.case-progress-bar {
+
+    height: 6px;
+
+    background: #1b3147;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+#caseProgressFill {
+
+    width: 25%;
+
+    height: 100%;
+
+    background: #4da6ff;
+
+    transition: width 0.4s ease;
+}
+
+
+/* Responsive */
+
+@media (max-width: 750px) {
+
+    .case-navigation {
+
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+    .case-study {
+
+        padding: 22px;
+    }
+
+    .warning-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+    .case-header h2 {
+
+        font-size: 22px;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .case-navigation {
+
+        grid-template-columns: 1fr;
+    }
+
+}

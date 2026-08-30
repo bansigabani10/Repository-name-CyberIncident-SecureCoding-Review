@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Fake Website Detection | PhishGuard</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="css/fake-websites.css">
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            🛡️ <span>PhishGuard</span>
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="index.html#training">Training</a>
+            <a href="index.html#about">About</a>
+        </nav>
+
+    </header>
+
+
+    <!-- Header -->
+
+    <section class="module-header">
+
+        <div class="module-badge">
+            🌐 FAKE WEBSITE TRAINING
+        </div>
+
+        <h1>
+            Can You Spot the
+            <span>Fake Website?</span>
+        </h1>
+
+        <p>
+            Examine the website below and click on the
+            elements you believe are suspicious.
+        </p>
+
+    </section>
+
+
+    <!-- Main -->
+
+    <main class="website-training">
+
+
+        <!-- Instructions -->
+
+        <div class="instructions">
+
+            <div class="instruction-icon">
+                🔎
+            </div>
+
+            <div>
+
+                <h3>
+                    Investigate the Website
+                </h3>
+
+                <p>
+                    Look carefully at the URL, security indicators,
+                    login form and other details before entering
+                    any information.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- Training Layout -->
+
+        <div class="website-layout">
+
+
+            <!-- Fake Browser -->
+
+            <div class="browser-window">
+
+
+                <!-- Browser Bar -->
+
+                <div class="browser-bar">
+
+                    <div class="browser-buttons">
+
+                        <span></span>
+                        <span></span>
+                        <span></span>
+
+                    </div>
+
+
+                    <!-- URL -->
+
+                    <button
+                        class="browser-url clickable"
+                        data-id="url">
+
+                        🔒
+                        https://secure-mybank-login.com
+
+                    </button>
+
+                </div>
+
+
+                <!-- Website -->
+
+                <div class="fake-bank-site">
+
+
+                    <!-- Website Header -->
+
+                    <header class="bank-header">
+
+                        <div class="bank-logo">
+                            🏦 MyBank
+                        </div>
+
+                        <div class="bank-support">
+                            Customer Support
+                        </div>
+
+                    </header>
+
+
+                    <!-- Login Area -->
+
+                    <div class="login-area">
+
+                        <div class="login-card">
+
+
+                            <div class="bank-icon">
+                                🏦
+                            </div>
+
+
+                            <h2>
+                                Online Banking
+                            </h2>
+
+                            <p class="login-subtitle">
+                                Sign in to access your account
+                            </p>
+
+
+                            <!-- Username -->
+
+                            <div class="input-group">
+
+                                <label>
+                                    Username
+                                </label>
+
+                                <button
+                                    class="fake-input clickable"
+                                    data-id="login-form">
+
+                                    Enter your username
+
+                                </button>
+
+                            </div>
+
+
+                            <!-- Password -->
+
+                            <div class="input-group">
+
+                                <label>
+                                    Password
+                                </label>
+
+                                <button
+                                    class="fake-input clickable"
+                                    data-id="password">
+
+                                    Enter your password
+
+                                </button>
+
+                            </div>
+
+
+                            <!-- Fake Security Message -->
+
+                            <button
+                                class="security-warning clickable"
+                                data-id="security">
+
+                                🔐 Your account must be
+                                verified immediately.
+
+                            </button>
+
+
+                            <!-- Login -->
+
+                            <button
+                                class="login-button clickable"
+                                data-id="login-button">
+
+                                Sign In
+
+                            </button>
+
+
+                            <!-- Forgot Password -->
+
+                            <button
+                                class="forgot-link clickable"
+                                data-id="forgot-password">
+
+                                Forgot your password?
+
+                            </button>
+
+
+                            <div class="login-footer">
+
+                                🔒 Protected by MyBank Security
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Website Footer -->
+
+                    <footer class="bank-footer">
+
+                        <p>
+                            © 2026 MyBank Online Banking
+                        </p>
+
+                        <p>
+                            Privacy | Terms | Security
+                        </p>
+
+                    </footer>
+
+                </div>
+
+            </div>
+
+
+            <!-- Analysis Panel -->
+
+            <aside class="analysis-panel">
+
+
+                <div class="score-box">
+
+                    <span>
+                        SECURITY FLAGS
+                    </span>
+
+                    <strong id="score">
+                        0
+                    </strong>
+
+                    <small>
+                        / 6 warning signs found
+                    </small>
+
+                </div>
+
+
+                <div class="progress-container">
+
+                    <div
+                        class="progress-bar"
+                        id="progressBar">
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="analysis-content"
+                    id="analysisContent">
+
+                    <div class="analysis-empty">
+
+                        🔍
+
+                        <h3>
+                            Inspect the Website
+                        </h3>
+
+                        <p>
+                            Click an element on the website
+                            to learn why it may be suspicious.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Completion -->
+
+                <div
+                    class="completion-message"
+                    id="completionMessage">
+
+                    <div class="completion-icon">
+                        🎉
+                    </div>
+
+                    <h3>
+                        Great Investigation!
+                    </h3>
+
+                    <p>
+                        You found all the major warning
+                        signs on this fake website.
+                    </p>
+
+                    <button onclick="resetWebsiteTraining()">
+                        Try Again
+                    </button>
+
+                </div>
+
+            </aside>
+
+        </div>
+
+
+        <!-- Safety Tips -->
+
+        <section class="website-tips">
+
+            <div class="section-title">
+
+                <span>
+                    WEBSITE SAFETY
+                </span>
+
+                <h2>
+                    Before You
+                    <span>Log In</span>
+                </h2>
+
+                <p>
+                    Use these checks whenever you visit a
+                    website that requests sensitive information.
+                </p>
+
+            </div>
+
+
+            <div class="tips-grid">
+
+
+                <div class="tip-card">
+
+                    <div class="tip-icon">
+                        🌐
+                    </div>
+
+                    <h3>
+                        Check the Domain
+                    </h3>
+
+                    <p>
+                        Carefully inspect the complete domain
+                        name. Don't rely only on the appearance
+                        of the page.
+                    </p>
+
+                </div>
+
+
+                <div class="tip-card">
+
+                    <div class="tip-icon">
+                        🔐
+                    </div>
+
+                    <h3>
+                        Don't Trust HTTPS Alone
+                    </h3>
+
+                    <p>
+                        HTTPS encrypts the connection, but a
+                        fraudulent website can also use HTTPS.
+                    </p>
+
+                </div>
+
+
+                <div class="tip-card">
+
+                    <div class="tip-icon">
+                        🔑
+                    </div>
+
+                    <h3>
+                        Protect Credentials
+                    </h3>
+
+                    <p>
+                        Don't enter passwords or banking details
+                        into a website unless you have verified
+                        its legitimacy.
+                    </p>
+
+                </div>
+
+
+                <div class="tip-card">
+
+                    <div class="tip-icon">
+                        🛑
+                    </div>
+
+                    <h3>
+                        Stop When Unsure
+                    </h3>
+
+                    <p>
+                        If something feels unusual, stop and
+                        access the organization's official website
+                        through a trusted route.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Navigation -->
+
+        <div class="module-navigation">
+
+            <a
+                href="email-phishing.html"
+                class="back-button">
+
+                ← Previous Module
+
+            </a>
+
+
+            <button
+                class="next-button"
+                onclick="goToNextModule()">
+
+                Next Module →
+
+            </button>
+
+        </div>
+
+    </main>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <div class="logo">
+            🛡️ PhishGuard
+        </div>
+
+        <p>
+            Phishing Awareness Training
+        </p>
+
+        <p class="copyright">
+            © 2026 PhishGuard | Cybersecurity Awareness Project
+        </p>
+
+    </footer>
+
+
+    <script src="js/fake-websites.js"></script>
+
+</body>
+
+</html>

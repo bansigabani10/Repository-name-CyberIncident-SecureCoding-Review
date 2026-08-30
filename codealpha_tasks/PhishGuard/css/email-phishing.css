@@ -1,0 +1,694 @@
+/* ==================================
+   PHISHING EMAIL TRAINING
+================================== */
+
+
+/* Page Header */
+
+.module-header {
+
+    padding: 70px 8% 50px;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #123554,
+            transparent 50%
+        );
+}
+
+.module-badge {
+
+    display: inline-block;
+
+    padding: 8px 16px;
+
+    border-radius: 30px;
+
+    background: #0d2942;
+
+    border: 1px solid #2b5d82;
+
+    color: #66b7ff;
+
+    font-size: 12px;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 20px;
+}
+
+.module-header h1 {
+
+    font-size: clamp(38px, 5vw, 60px);
+
+    line-height: 1.1;
+
+    margin-bottom: 20px;
+}
+
+.module-header h1 span {
+
+    color: #4da6ff;
+}
+
+.module-header p {
+
+    max-width: 650px;
+
+    margin: auto;
+
+    color: #9db0c3;
+
+    font-size: 16px;
+}
+
+
+/* Main */
+
+.email-training {
+
+    padding: 50px 8% 100px;
+
+    max-width: 1400px;
+
+    margin: auto;
+}
+
+
+/* Instructions */
+
+.instructions {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 20px 25px;
+
+    background: #0d2033;
+
+    border: 1px solid #21415c;
+
+    border-radius: 12px;
+
+    margin-bottom: 30px;
+}
+
+.instruction-icon {
+
+    font-size: 35px;
+}
+
+.instructions h3 {
+
+    margin-bottom: 5px;
+}
+
+.instructions p {
+
+    color: #91a6b9;
+
+    font-size: 14px;
+}
+
+
+/* Training Layout */
+
+.training-layout {
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        350px;
+
+    gap: 25px;
+
+    align-items: start;
+}
+
+
+/* Email */
+
+.email-container {
+
+    background: #ffffff;
+
+    color: #202833;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 20px 60px
+        rgba(0, 0, 0, 0.35);
+}
+
+.email-top {
+
+    padding: 17px 22px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    background: #edf2f7;
+
+    border-bottom: 1px solid #d5dde5;
+}
+
+.email-title {
+
+    font-weight: bold;
+
+    color: #26384b;
+}
+
+.email-actions {
+
+    color: #718096;
+}
+
+.email-content {
+
+    padding: 30px;
+}
+
+.email-row {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 12px;
+
+    margin-bottom: 15px;
+
+    font-size: 14px;
+}
+
+.email-row strong {
+
+    min-width: 70px;
+
+    color: #66788a;
+}
+
+.email-row span {
+
+    color: #273747;
+}
+
+
+/* Clickable Elements */
+
+.clickable {
+
+    border: none;
+
+    cursor: pointer;
+
+    font: inherit;
+
+    text-align: left;
+
+    transition: 0.25s;
+}
+
+.suspicious {
+
+    background: #fff3cd;
+
+    color: #6b4e00;
+
+    padding: 5px 8px;
+
+    border-radius: 5px;
+}
+
+.suspicious:hover {
+
+    background: #ffe49a;
+
+    transform: translateX(3px);
+}
+
+.suspicious.found {
+
+    background: #ffd6d6;
+
+    color: #9b2226;
+
+    outline: 2px solid #e55353;
+}
+
+.subject-row .suspicious {
+
+    font-weight: bold;
+}
+
+
+/* Email Body */
+
+.email-body {
+
+    font-size: 15px;
+
+    line-height: 1.8;
+}
+
+.email-body p {
+
+    margin-bottom: 18px;
+}
+
+.body-warning {
+
+    display: block;
+
+    width: 100%;
+
+    margin: 20px 0;
+
+    padding: 15px;
+
+    font-weight: bold;
+}
+
+
+/* Fake Link */
+
+.fake-link {
+
+    display: block;
+
+    margin: 25px auto;
+
+    padding: 14px 25px;
+
+    background: #2176d2;
+
+    color: white;
+
+    border-radius: 6px;
+
+    text-align: center;
+
+    font-weight: bold;
+
+    max-width: 240px;
+}
+
+.fake-link:hover {
+
+    background: #145ca8;
+}
+
+
+/* Footer */
+
+.email-footer {
+
+    margin-top: 30px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #dce2e8;
+}
+
+.email-footer button {
+
+    width: 100%;
+
+    font-size: 12px;
+}
+
+
+/* Analysis Panel */
+
+.analysis-panel {
+
+    position: sticky;
+
+    top: 100px;
+
+    background: #0c1c2d;
+
+    border: 1px solid #213d56;
+
+    border-radius: 14px;
+
+    padding: 25px;
+
+    min-height: 430px;
+}
+
+
+/* Score */
+
+.score-box {
+
+    text-align: center;
+
+    padding-bottom: 20px;
+
+    border-bottom: 1px solid #213d56;
+}
+
+.score-box span {
+
+    display: block;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    color: #7f98af;
+}
+
+.score-box strong {
+
+    display: block;
+
+    font-size: 55px;
+
+    line-height: 1.1;
+
+    color: #4da6ff;
+
+    margin-top: 8px;
+}
+
+.score-box small {
+
+    color: #7f98af;
+}
+
+
+/* Progress */
+
+.progress-container {
+
+    width: 100%;
+
+    height: 7px;
+
+    margin: 20px 0;
+
+    background: #1b3147;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+.progress-bar {
+
+    height: 100%;
+
+    width: 0%;
+
+    background: #4da6ff;
+
+    transition: width 0.4s ease;
+}
+
+
+/* Analysis */
+
+.analysis-content {
+
+    min-height: 180px;
+}
+
+.analysis-empty {
+
+    text-align: center;
+
+    padding: 30px 10px;
+
+    color: #71879c;
+}
+
+.analysis-empty:first-letter {
+
+    font-size: 35px;
+}
+
+.analysis-result h3 {
+
+    color: #ff7474;
+
+    margin-bottom: 10px;
+}
+
+.analysis-result p {
+
+    color: #a6b7c7;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+.analysis-result .tip {
+
+    margin-top: 15px;
+
+    padding: 12px;
+
+    border-left: 3px solid #4da6ff;
+
+    background: #10283e;
+
+    color: #a9bdd0;
+
+    font-size: 13px;
+}
+
+
+/* Completion */
+
+.completion-message {
+
+    display: none;
+
+    text-align: center;
+
+    margin-top: 15px;
+
+    padding: 20px;
+
+    background: #10283b;
+
+    border-radius: 10px;
+}
+
+.completion-message.show {
+
+    display: block;
+}
+
+.completion-icon {
+
+    font-size: 40px;
+
+    margin-bottom: 10px;
+}
+
+.completion-message h3 {
+
+    margin-bottom: 8px;
+}
+
+.completion-message p {
+
+    color: #9eb2c5;
+
+    font-size: 13px;
+
+    margin-bottom: 15px;
+}
+
+.completion-message button {
+
+    padding: 10px 18px;
+
+    border-radius: 6px;
+
+    background: #2176d2;
+
+    color: white;
+}
+
+
+/* Red Flags */
+
+.red-flags {
+
+    margin-top: 100px;
+}
+
+.flag-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.flag-card {
+
+    padding: 25px;
+
+    background: #0c1c2d;
+
+    border: 1px solid #203c55;
+
+    border-radius: 12px;
+}
+
+.flag-card > div {
+
+    font-size: 30px;
+
+    margin-bottom: 15px;
+}
+
+.flag-card h3 {
+
+    margin-bottom: 8px;
+}
+
+.flag-card p {
+
+    color: #8fa4b7;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+/* Module Navigation */
+
+.module-navigation {
+
+    margin-top: 60px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+.back-button,
+.next-button {
+
+    padding: 13px 22px;
+
+    border-radius: 7px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    font-size: 14px;
+}
+
+.back-button {
+
+    color: #9eb3c7;
+
+    border: 1px solid #2a455e;
+}
+
+.next-button {
+
+    border: none;
+
+    color: white;
+
+    background: #2176d2;
+
+    cursor: pointer;
+}
+
+
+/* Responsive */
+
+@media (max-width: 1000px) {
+
+    .training-layout {
+
+        grid-template-columns: 1fr;
+    }
+
+    .analysis-panel {
+
+        position: static;
+    }
+
+    .flag-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .email-training {
+
+        padding-left: 5%;
+
+        padding-right: 5%;
+    }
+
+    .email-content {
+
+        padding: 20px;
+    }
+
+    .email-row {
+
+        flex-direction: column;
+
+        gap: 5px;
+    }
+
+    .instructions {
+
+        align-items: flex-start;
+    }
+
+    .flag-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+    .module-navigation {
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .back-button,
+    .next-button {
+
+        width: 100%;
+
+        text-align: center;
+    }
+}

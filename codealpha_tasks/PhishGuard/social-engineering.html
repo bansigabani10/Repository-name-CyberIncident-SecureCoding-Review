@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Social Engineering Training | PhishGuard</title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+    <link rel="stylesheet"
+          href="css/social-engineering.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- Navigation -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            🛡️ <span>PhishGuard</span>
+        </div>
+
+        <nav>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="index.html#training">
+                Training
+            </a>
+
+            <a href="index.html#about">
+                About
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- Header -->
+
+    <section class="module-header">
+
+        <div class="module-badge">
+            🧠 SOCIAL ENGINEERING TRAINING
+        </div>
+
+        <h1>
+
+            Outsmart the
+            <span>Manipulation</span>
+
+        </h1>
+
+        <p>
+
+            Attackers don't always rely on technology.
+            They often manipulate people into making
+            unsafe decisions.
+
+        </p>
+
+    </section>
+
+
+    <!-- Main -->
+
+    <main class="social-training">
+
+
+        <!-- Progress -->
+
+        <div class="scenario-progress">
+
+            <div class="progress-info">
+
+                <span id="scenarioNumber">
+                    Scenario 1 of 6
+                </span>
+
+                <span id="scoreDisplay">
+                    Score: 0 / 6
+                </span>
+
+            </div>
+
+
+            <div class="scenario-progress-bar">
+
+                <div
+                    id="scenarioProgress"
+                    class="scenario-progress-fill">
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Scenario -->
+
+        <section class="scenario-card"
+                 id="scenarioCard">
+
+
+            <div class="scenario-header">
+
+                <div
+                    class="technique-icon"
+                    id="techniqueIcon">
+
+                    😨
+
+                </div>
+
+
+                <div>
+
+                    <div
+                        class="technique-label"
+                        id="techniqueLabel">
+
+                        FEAR
+
+                    </div>
+
+                    <h2 id="scenarioTitle">
+
+                        The Security Threat
+
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <!-- Situation -->
+
+            <div class="situation-box">
+
+                <div class="situation-label">
+                    📱 SITUATION
+                </div>
+
+                <p id="scenarioText">
+
+                    You receive a phone call from someone
+                    claiming to be from your company's
+                    IT department.
+
+                    <br><br>
+
+                    They tell you that your computer has
+                    been infected and that your account
+                    will be disabled unless you immediately
+                    follow their instructions.
+
+                </p>
+
+            </div>
+
+
+            <!-- Attacker -->
+
+            <div class="attacker-message">
+
+                <div class="attacker-avatar">
+                    👤
+                </div>
+
+                <div class="attacker-content">
+
+                    <strong>
+                        Unknown Caller
+                    </strong>
+
+                    <p id="attackerText">
+
+                        "Your system has been compromised.
+                        If you don't act right now,
+                        your account will be permanently
+                        disabled."
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Question -->
+
+            <div class="question">
+
+                <h3>
+                    What would you do?
+                </h3>
+
+            </div>
+
+
+            <!-- Choices -->
+
+            <div
+                class="choices"
+                id="choices">
+
+            </div>
+
+
+            <!-- Feedback -->
+
+            <div
+                class="feedback"
+                id="feedback">
+
+            </div>
+
+
+            <!-- Next -->
+
+            <button
+                id="nextButton"
+                class="next-scenario"
+                onclick="nextScenario()">
+
+                Next Scenario →
+
+            </button>
+
+
+        </section>
+
+
+        <!-- Final Result -->
+
+        <section
+            class="final-result"
+            id="finalResult">
+
+
+            <div class="result-icon">
+                🎉
+            </div>
+
+
+            <div class="result-label">
+                TRAINING COMPLETE
+            </div>
+
+
+            <h2>
+                Social Engineering Assessment
+            </h2>
+
+
+            <div class="final-score">
+
+                <span id="finalScore">
+                    0
+                </span>
+
+                <small>
+                    / 6
+                </small>
+
+            </div>
+
+
+            <p id="finalMessage">
+
+                You completed all six social engineering
+                scenarios.
+
+            </p>
+
+
+            <div class="result-tips">
+
+                <h3>
+                    🛡️ Remember
+                </h3>
+
+                <p>
+                    Attackers may try to manipulate your
+                    emotions instead of attacking technology.
+                    Slow down, verify the request and never
+                    allow pressure to override security.
+                </p>
+
+            </div>
+
+
+            <button
+                class="restart-button"
+                onclick="restartTraining()">
+
+                Restart Training
+
+            </button>
+
+
+        </section>
+
+
+        <!-- Techniques -->
+
+        <section class="techniques">
+
+
+            <div class="section-title">
+
+                <span>
+                    SOCIAL ENGINEERING
+                </span>
+
+                <h2>
+                    Six Manipulation
+                    <span>Techniques</span>
+                </h2>
+
+            </div>
+
+
+            <div class="technique-grid">
+
+
+                <div class="technique-card">
+
+                    <div>
+                        😨
+                    </div>
+
+                    <h3>
+                        Fear
+                    </h3>
+
+                    <p>
+                        Attackers create fear by threatening
+                        consequences such as account closure,
+                        security incidents or financial loss.
+                    </p>
+
+                </div>
+
+
+                <div class="technique-card">
+
+                    <div>
+                        ⏰
+                    </div>
+
+                    <h3>
+                        Urgency
+                    </h3>
+
+                    <p>
+                        Victims are pressured to act quickly
+                        before they have time to verify
+                        the request.
+                    </p>
+
+                </div>
+
+
+                <div class="technique-card">
+
+                    <div>
+                        👔
+                    </div>
+
+                    <h3>
+                        Authority
+                    </h3>
+
+                    <p>
+                        Attackers pretend to be managers,
+                        IT staff, banks or other trusted
+                        authorities.
+                    </p>
+
+                </div>
+
+
+                <div class="technique-card">
+
+                    <div>
+                        🔍
+                    </div>
+
+                    <h3>
+                        Curiosity
+                    </h3>
+
+                    <p>
+                        Interesting or unexpected information
+                        is used to make people open links,
+                        files or messages.
+                    </p>
+
+                </div>
+
+
+                <div class="technique-card">
+
+                    <div>
+                        🎁
+                    </div>
+
+                    <h3>
+                        Reward
+                    </h3>
+
+                    <p>
+                        Attackers offer prizes, discounts,
+                        bonuses or other rewards to encourage
+                        unsafe actions.
+                    </p>
+
+                </div>
+
+
+                <div class="technique-card">
+
+                    <div>
+                        🤝
+                    </div>
+
+                    <h3>
+                        Trust
+                    </h3>
+
+                    <p>
+                        Attackers build familiarity or pretend
+                        to be someone the victim already knows.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Navigation -->
+
+        <div class="module-navigation">
+
+            <a
+                href="fake-websites.html"
+                class="back-button">
+
+                ← Previous Module
+
+            </a>
+
+
+            <button
+                class="next-button"
+                onclick="goToExamples()">
+
+                Real-World Examples →
+
+            </button>
+
+        </div>
+
+
+    </main>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <div class="logo">
+            🛡️ PhishGuard
+        </div>
+
+        <p>
+            Phishing Awareness Training
+        </p>
+
+        <p class="copyright">
+            © 2026 PhishGuard | Cybersecurity Awareness Project
+        </p>
+
+    </footer>
+
+
+    <script src="js/social-engineering.js"></script>
+
+</body>
+
+</html>

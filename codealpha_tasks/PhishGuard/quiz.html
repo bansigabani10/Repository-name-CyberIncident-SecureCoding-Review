@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Final Phishing Awareness Quiz | PhishGuard
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css">
+
+    <link
+        rel="stylesheet"
+        href="css/quiz.css">
+
+</head>
+
+
+<body>
+
+
+<header class="navbar">
+
+    <div class="logo">
+
+        🛡️ <span>PhishGuard</span>
+
+    </div>
+
+
+    <nav>
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="index.html#training">
+            Training
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<section class="module-header">
+
+    <div class="module-badge">
+
+        📝 FINAL ASSESSMENT
+
+    </div>
+
+
+    <h1>
+
+        Phishing Awareness
+        <span>Final Quiz</span>
+
+    </h1>
+
+
+    <p>
+
+        Test what you learned about phishing,
+        fake websites and social engineering.
+
+    </p>
+
+</section>
+
+
+
+<main class="quiz-container">
+
+
+    <!-- Quiz -->
+
+    <section
+        class="quiz-card"
+        id="quizCard">
+
+
+        <!-- Progress -->
+
+        <div class="quiz-top">
+
+
+            <span id="questionNumber">
+
+                Question 1 of 10
+
+            </span>
+
+
+            <span id="quizScore">
+
+                Score: 0
+
+            </span>
+
+
+        </div>
+
+
+        <div class="quiz-progress">
+
+            <div
+                id="quizProgressFill">
+            </div>
+
+        </div>
+
+
+
+        <!-- Question -->
+
+        <div class="question-area">
+
+
+            <div
+                class="question-category"
+                id="questionCategory">
+
+                PHISHING
+
+            </div>
+
+
+            <h2 id="questionText">
+
+                Question text
+
+            </h2>
+
+
+            <div
+                class="answer-options"
+                id="answerOptions">
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- Feedback -->
+
+        <div
+            class="quiz-feedback"
+            id="quizFeedback">
+
+        </div>
+
+
+
+        <!-- Next -->
+
+        <button
+            id="nextQuestion"
+            class="next-question">
+
+            Next Question →
+
+        </button>
+
+
+    </section>
+
+
+
+    <!-- Result -->
+
+    <section
+        class="quiz-result"
+        id="quizResult">
+
+
+        <div class="certificate-icon">
+
+            🏆
+
+        </div>
+
+
+        <div class="completion-label">
+
+            TRAINING COMPLETED
+
+        </div>
+
+
+        <h2>
+
+            Phishing Awareness
+            Assessment
+
+        </h2>
+
+
+        <div class="final-score">
+
+            <span id="finalScore">
+                0
+            </span>
+
+            <small>
+                / 10
+            </small>
+
+        </div>
+
+
+        <div class="percentage"
+             id="percentage">
+
+            0%
+
+        </div>
+
+
+        <div
+            class="result-status"
+            id="resultStatus">
+
+        </div>
+
+
+        <p id="resultMessage">
+
+        </p>
+
+
+
+        <!-- Review -->
+
+        <div class="review-section">
+
+
+            <h3>
+
+                📋 Answer Review
+
+            </h3>
+
+
+            <div
+                id="answerReview">
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="certificate-box">
+
+
+            <div class="certificate-border">
+
+
+                <div class="certificate-logo">
+
+                    🛡️
+
+                </div>
+
+
+                <div class="certificate-small">
+
+                    PHISHGUARD
+
+                </div>
+
+
+                <h3>
+
+                    CERTIFICATE OF COMPLETION
+
+                </h3>
+
+
+                <p>
+
+                    This certifies that the learner has
+                    completed the Phishing Awareness
+                    Training Program.
+
+                </p>
+
+
+                <strong>
+
+                    Phishing & Social Engineering Awareness
+
+                </strong>
+
+
+                <div class="certificate-line">
+
+                </div>
+
+
+                <small>
+
+                    Training Assessment Completed
+
+                </small>
+
+
+            </div>
+
+        </div>
+
+
+
+        <div class="result-buttons">
+
+
+            <button
+                onclick="restartQuiz()"
+                class="restart-quiz">
+
+                🔄 Retake Quiz
+
+            </button>
+
+
+            <button
+                onclick="goHome()"
+                class="home-button">
+
+                🏠 Back to Training
+
+            </button>
+
+
+        </div>
+
+
+    </section>
+
+
+</main>
+
+
+
+<footer>
+
+    <div class="logo">
+
+        🛡️ PhishGuard
+
+    </div>
+
+
+    <p>
+
+        Phishing Awareness Training
+
+    </p>
+
+
+    <p class="copyright">
+
+        © 2026 PhishGuard |
+        Cybersecurity Awareness Project
+
+    </p>
+
+</footer>
+
+
+<script src="js/quiz.js"></script>
+
+</body>
+
+</html>

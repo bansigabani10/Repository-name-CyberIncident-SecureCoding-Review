@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>PhishGuard | Human Risk Dashboard</title>
+
+    <link
+        rel="stylesheet"
+        href="css/human-risk-dashboard.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     SIDEBAR
+====================================================== -->
+
+<aside class="sidebar">
+
+    <div class="brand">
+
+        <div class="brand-icon">
+            🛡️
+        </div>
+
+        <div>
+            <h2>PhishGuard</h2>
+            <span>Security Awareness</span>
+        </div>
+
+    </div>
+
+
+    <nav>
+
+        <a href="index.html">
+            <span>⌂</span>
+            Dashboard
+        </a>
+
+        <a href="phishing-email.html">
+            <span>✉</span>
+            Email Detection
+        </a>
+
+        <a href="fake-website.html">
+            <span>🌐</span>
+            Fake Website
+        </a>
+
+        <a href="social-engineering.html">
+            <span>⚠</span>
+            Social Engineering
+        </a>
+
+        <a href="real-world-examples.html">
+            <span>📚</span>
+            Real-World Examples
+        </a>
+
+        <a href="quiz.html">
+            <span>✓</span>
+            Final Quiz
+        </a>
+
+        <a
+            href="human-risk-dashboard.html"
+            class="active"
+        >
+            <span>📊</span>
+            Human Risk
+        </a>
+
+    </nav>
+
+
+    <div class="sidebar-footer">
+
+        <div class="security-status">
+
+            <span class="status-dot"></span>
+
+            Security System Active
+
+        </div>
+
+        <small>
+            PhishGuard v1.0
+        </small>
+
+    </div>
+
+</aside>
+
+
+
+<!-- =====================================================
+     MAIN CONTENT
+====================================================== -->
+
+<main class="main-content">
+
+
+    <!-- HEADER -->
+
+    <header class="topbar">
+
+        <div>
+
+            <p class="eyebrow">
+                PHASE 8.2
+            </p>
+
+            <h1>
+                Human Risk Dashboard
+            </h1>
+
+            <p class="subtitle">
+                Behavioral analysis based on your phishing
+                and social-engineering decisions.
+            </p>
+
+        </div>
+
+
+        <div class="topbar-actions">
+
+            <button
+                id="refreshAnalysis"
+                class="btn secondary-btn"
+            >
+                ↻ Re-analyze
+            </button>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =================================================
+         RISK OVERVIEW
+    ================================================== -->
+
+    <section class="overview-grid">
+
+
+        <!-- RISK SCORE -->
+
+        <div class="card risk-card">
+
+            <div class="card-header">
+
+                <div>
+
+                    <span class="card-label">
+                        HUMAN RISK SCORE
+                    </span>
+
+                    <h3>
+                        Overall Exposure
+                    </h3>
+
+                </div>
+
+                <span class="shield-icon">
+                    🛡️
+                </span>
+
+            </div>
+
+
+            <div class="risk-score-wrapper">
+
+                <div class="risk-circle">
+
+                    <div>
+
+                        <strong id="riskScore">
+                            0
+                        </strong>
+
+                        <span>
+                            /100
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="risk-info">
+
+                    <div
+                        id="riskLevel"
+                        class="risk-badge"
+                    >
+                        NOT ASSESSED
+                    </div>
+
+                    <p id="riskDescription">
+                        Complete the Attack Simulator
+                        to generate your profile.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- DECISION ACCURACY -->
+
+        <div class="card stat-card">
+
+            <div class="stat-icon">
+                🎯
+            </div>
+
+            <span class="card-label">
+                DECISION ACCURACY
+            </span>
+
+            <strong id="accuracy">
+                0%
+            </strong>
+
+            <p>
+                Correct security decisions
+            </p>
+
+        </div>
+
+
+
+        <!-- SAFE -->
+
+        <div class="card stat-card">
+
+            <div class="stat-icon">
+                ✓
+            </div>
+
+            <span class="card-label">
+                SAFE DECISIONS
+            </span>
+
+            <strong id="safeDecisions">
+                0
+            </strong>
+
+            <p>
+                Protective choices
+            </p>
+
+        </div>
+
+
+
+        <!-- RISKY -->
+
+        <div class="card stat-card">
+
+            <div class="stat-icon">
+                ⚠
+            </div>
+
+            <span class="card-label">
+                RISKY DECISIONS
+            </span>
+
+            <strong id="riskyDecisions">
+                0
+            </strong>
+
+            <p>
+                Potentially dangerous choices
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         ATTACK DNA
+    ================================================== -->
+
+    <section class="dashboard-grid">
+
+
+        <div class="card attack-dna-card">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span class="card-label">
+                        BEHAVIORAL ANALYSIS
+                    </span>
+
+                    <h2>
+                        Attack DNA
+                    </h2>
+
+                    <p>
+                        Shows which social-engineering
+                        techniques are most likely to
+                        influence your decisions.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="dna-container">
+
+                <div class="dna-bars">
+
+                    <div class="dna-row">
+
+                        <div class="dna-label">
+                            <span>😨</span>
+                            Fear
+                        </div>
+
+                        <div class="progress">
+                            <div
+                                id="fearBar"
+                                class="progress-fill"
+                            ></div>
+                        </div>
+
+                        <strong id="fearValue">
+                            0%
+                        </strong>
+
+                    </div>
+
+
+
+                    <div class="dna-row">
+
+                        <div class="dna-label">
+                            <span>⏱️</span>
+                            Urgency
+                        </div>
+
+                        <div class="progress">
+                            <div
+                                id="urgencyBar"
+                                class="progress-fill"
+                            ></div>
+                        </div>
+
+                        <strong id="urgencyValue">
+                            0%
+                        </strong>
+
+                    </div>
+
+
+
+                    <div class="dna-row">
+
+                        <div class="dna-label">
+                            <span>👔</span>
+                            Authority
+                        </div>
+
+                        <div class="progress">
+                            <div
+                                id="authorityBar"
+                                class="progress-fill"
+                            ></div>
+                        </div>
+
+                        <strong id="authorityValue">
+                            0%
+                        </strong>
+
+                    </div>
+
+
+
+                    <div class="dna-row">
+
+                        <div class="dna-label">
+                            <span>🔍</span>
+                            Curiosity
+                        </div>
+
+                        <div class="progress">
+                            <div
+                                id="curiosityBar"
+                                class="progress-fill"
+                            ></div>
+                        </div>
+
+                        <strong id="curiosityValue">
+                            0%
+                        </strong>
+
+                    </div>
+
+
+
+                    <div class="dna-row">
+
+                        <div class="dna-label">
+                            <span>🎁</span>
+                            Reward
+                        </div>
+
+                        <div class="progress">
+                            <div
+                                id="rewardBar"
+                                class="progress-fill"
+                            ></div>
+                        </div>
+
+                        <strong id="rewardValue">
+                            0%
+                        </strong>
+
+                    </div>
+
+
+
+                    <div class="dna-row">
+
+                        <div class="dna-label">
+                            <span>🤝</span>
+                            Trust
+                        </div>
+
+                        <div class="progress">
+                            <div
+                                id="trustBar"
+                                class="progress-fill"
+                            ></div>
+                        </div>
+
+                        <strong id="trustValue">
+                            0%
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             PRIMARY WEAKNESS
+        ================================================== -->
+
+        <div class="card weakness-card">
+
+            <span class="card-label">
+                PRIMARY VULNERABILITY
+            </span>
+
+            <div class="weakness-icon">
+                ⚠️
+            </div>
+
+            <h2 id="primaryWeakness">
+                No weakness detected
+            </h2>
+
+            <div class="weakness-score">
+
+                Exposure:
+                <strong id="primaryScore">
+                    0%
+                </strong>
+
+            </div>
+
+            <p id="trainingDescription">
+
+                Complete more attack simulations
+                to receive personalized training.
+
+            </p>
+
+            <button
+                id="trainingButton"
+                class="btn primary-btn"
+            >
+                Start Recommended Training
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         BEHAVIOR INSIGHTS
+    ================================================== -->
+
+    <section class="card insights-card">
+
+        <div class="section-heading">
+
+            <div>
+
+                <span class="card-label">
+                    SECURITY INTELLIGENCE
+                </span>
+
+                <h2>
+                    Behavioral Insights
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div
+            id="insightsContainer"
+            class="insights-container"
+        >
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         ACTIVITY SUMMARY
+    ================================================== -->
+
+    <section class="card activity-card">
+
+        <div class="section-heading">
+
+            <div>
+
+                <span class="card-label">
+                    SIMULATION ACTIVITY
+                </span>
+
+                <h2>
+                    Training Summary
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="activity-grid">
+
+
+            <div class="activity-item">
+
+                <span>
+                    Completed Scenarios
+                </span>
+
+                <strong id="completedScenarios">
+                    0
+                </strong>
+
+            </div>
+
+
+            <div class="activity-item">
+
+                <span>
+                    Total Decisions
+                </span>
+
+                <strong id="totalDecisions">
+                    0
+                </strong>
+
+            </div>
+
+
+            <div class="activity-item">
+
+                <span>
+                    Safe Decisions
+                </span>
+
+                <strong id="summarySafe">
+                    0
+                </strong>
+
+            </div>
+
+
+            <div class="activity-item">
+
+                <span>
+                    Risky Decisions
+                </span>
+
+                <strong id="summaryRisky">
+                    0
+                </strong>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            PhishGuard Human Risk Engine
+            • Behavioral awareness analysis
+        </p>
+
+    </footer>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+====================================================== -->
+
+<script src="js/human-risk-engine.js"></script>
+
+<script src="js/human-risk-dashboard.js"></script>
+
+
+</body>
+
+</html>

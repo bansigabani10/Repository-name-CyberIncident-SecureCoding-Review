@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Incident Dashboard</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Incident Dashboard</h1>
+
+
+    <p>
+        Welcome,
+        <strong>{{ session["username"] }}</strong>
+    </p>
+
+
+    {% with messages = get_flashed_messages() %}
+
+        {% for message in messages %}
+
+            <div class="message">
+                {{ message }}
+            </div>
+
+        {% endfor %}
+
+    {% endwith %}
+
+
+    <div class="actions">
+
+        <a
+            class="button"
+            href="{{ url_for('report') }}"
+        >
+            Report Incident
+        </a>
+
+
+        <!-- POST + CSRF protected logout -->
+
+        <form
+            method="POST"
+            action="{{ url_for('logout') }}"
+            class="logout-form"
+        >
+
+            <input
+                type="hidden"
+                name="csrf_token"
+                value="{{ csrf_token() }}"
+            >
+
+            <button
+                type="submit"
+                class="logout-button"
+            >
+                Logout
+            </button>
+
+        </form>
+
+    </div>
+
+
+    <h2>My Incidents</h2>
+
+
+    {% if incidents %}
+
+        {% for incident in incidents %}
+
+            <div class="incident">
+
+                <h3>
+                    {{ incident.title }}
+                </h3>
+
+
+                <p>
+                    {{ incident.description }}
+                </p>
+
+
+                <p>
+                    <strong>Severity:</strong>
+
+                    <span class="severity">
+                        {{ incident.severity }}
+                    </span>
+                </p>
+
+
+                <p>
+                    <strong>Status:</strong>
+
+                    <span class="status">
+                        {{ incident.status }}
+                    </span>
+                </p>
+
+
+                <p>
+                    <strong>Incident ID:</strong>
+                    {{ incident.id }}
+                </p>
+
+            </div>
+
+        {% endfor %}
+
+    {% else %}
+
+        <p>
+            No incidents reported yet.
+        </p>
+
+    {% endif %}
+
+</div>
+
+</body>
+
+</html>

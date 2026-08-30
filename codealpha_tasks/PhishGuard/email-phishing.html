@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Phishing Email Detection | PhishGuard</title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+    <link rel="stylesheet"
+          href="css/email-phishing.css">
+
+</head>
+
+
+<body>
+
+    <!-- Navigation -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            🛡️ <span>PhishGuard</span>
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="index.html#training">Training</a>
+            <a href="index.html#about">About</a>
+        </nav>
+
+    </header>
+
+
+    <!-- Page Header -->
+
+    <section class="module-header">
+
+        <div class="module-badge">
+            📧 PHISHING EMAIL TRAINING
+        </div>
+
+        <h1>
+            Can You Spot the
+            <span>Phishing Email?</span>
+        </h1>
+
+        <p>
+            Click on the suspicious parts of the email below.
+            Each correct finding will reveal why the element
+            could be dangerous.
+        </p>
+
+    </section>
+
+
+    <!-- Main Training Area -->
+
+    <main class="email-training">
+
+
+        <!-- Instructions -->
+
+        <div class="instructions">
+
+            <div class="instruction-icon">
+                💡
+            </div>
+
+            <div>
+
+                <h3>How to use this exercise</h3>
+
+                <p>
+                    Examine the email carefully. Click on anything
+                    you think could be a warning sign.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- Training Layout -->
+
+        <div class="training-layout">
+
+
+            <!-- Email -->
+
+            <div class="email-container">
+
+                <div class="email-top">
+
+                    <div class="email-title">
+                        📩 Inbox
+                    </div>
+
+                    <div class="email-actions">
+                        •••
+                    </div>
+
+                </div>
+
+
+                <div class="email-content">
+
+
+                    <!-- Sender -->
+
+                    <div class="email-row">
+
+                        <strong>From:</strong>
+
+                        <button
+                            class="clickable suspicious"
+                            data-id="sender">
+
+                            PayPal Security
+                            &lt;security@paypa1-support.com&gt;
+
+                        </button>
+
+                    </div>
+
+
+                    <!-- Recipient -->
+
+                    <div class="email-row">
+
+                        <strong>To:</strong>
+
+                        <span>
+                            you@example.com
+                        </span>
+
+                    </div>
+
+
+                    <!-- Subject -->
+
+                    <div class="email-row subject-row">
+
+                        <strong>Subject:</strong>
+
+                        <button
+                            class="clickable suspicious"
+                            data-id="subject">
+
+                            🚨 URGENT: Your Account Will Be
+                            Suspended!
+
+                        </button>
+
+                    </div>
+
+
+                    <hr>
+
+
+                    <!-- Email Body -->
+
+                    <div class="email-body">
+
+                        <p>
+                            Dear Customer,
+                        </p>
+
+
+                        <p>
+
+                            We detected unusual activity
+                            associated with your account.
+
+                        </p>
+
+
+                        <button
+                            class="clickable suspicious body-warning"
+                            data-id="urgency">
+
+                            ⚠️ Your account will be permanently
+                            suspended within 24 hours unless you
+                            verify your identity.
+
+                        </button>
+
+
+                        <p>
+
+                            To prevent account suspension,
+                            please verify your information
+                            immediately.
+
+                        </p>
+
+
+                        <!-- Fake Link -->
+
+                        <button
+                            class="fake-link clickable suspicious"
+                            data-id="link">
+
+                            VERIFY YOUR ACCOUNT
+
+                        </button>
+
+
+                        <p>
+
+                            Please provide the requested
+                            information to restore full access
+                            to your account.
+
+                        </p>
+
+
+                        <p>
+
+                            Thank you,<br>
+
+                            PayPal Security Team
+
+                        </p>
+
+                    </div>
+
+
+                    <!-- Footer -->
+
+                    <div class="email-footer">
+
+                        <button
+                            class="clickable suspicious"
+                            data-id="information">
+
+                            This message requires your account
+                            information to complete verification.
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Analysis Panel -->
+
+            <aside class="analysis-panel">
+
+
+                <div class="score-box">
+
+                    <span>PHISHING SCORE</span>
+
+                    <strong id="score">
+                        0
+                    </strong>
+
+                    <small>
+                        / 5 red flags found
+                    </small>
+
+                </div>
+
+
+                <div class="progress-container">
+
+                    <div
+                        class="progress-bar"
+                        id="progressBar">
+                    </div>
+
+                </div>
+
+
+                <div class="analysis-content"
+                     id="analysisContent">
+
+                    <div class="analysis-empty">
+
+                        🔍
+
+                        <h3>
+                            Analyze the Email
+                        </h3>
+
+                        <p>
+                            Click a suspicious element
+                            in the email to see its analysis.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Completion -->
+
+                <div
+                    class="completion-message"
+                    id="completionMessage">
+
+                    <div class="completion-icon">
+                        🎉
+                    </div>
+
+                    <h3>
+                        Excellent Work!
+                    </h3>
+
+                    <p>
+                        You identified all major warning
+                        signs in this phishing email.
+                    </p>
+
+                    <button
+                        onclick="resetTraining()">
+
+                        Try Again
+
+                    </button>
+
+                </div>
+
+            </aside>
+
+        </div>
+
+
+        <!-- Learning Section -->
+
+        <section class="red-flags">
+
+            <div class="section-title">
+
+                <span>LEARNING CHECKLIST</span>
+
+                <h2>
+                    Common Phishing
+                    <span>Warning Signs</span>
+                </h2>
+
+            </div>
+
+
+            <div class="flag-grid">
+
+                <div class="flag-card">
+
+                    <div>📧</div>
+
+                    <h3>
+                        Suspicious Sender
+                    </h3>
+
+                    <p>
+                        Check the sender's email address
+                        carefully for unusual domains,
+                        spelling mistakes or impersonation.
+                    </p>
+
+                </div>
+
+
+                <div class="flag-card">
+
+                    <div>🚨</div>
+
+                    <h3>
+                        Urgent Language
+                    </h3>
+
+                    <p>
+                        Attackers often create fear and
+                        urgency to make victims act quickly.
+                    </p>
+
+                </div>
+
+
+                <div class="flag-card">
+
+                    <div>🔗</div>
+
+                    <h3>
+                        Suspicious Links
+                    </h3>
+
+                    <p>
+                        Don't click unexpected links.
+                        Verify the destination before
+                        entering credentials.
+                    </p>
+
+                </div>
+
+
+                <div class="flag-card">
+
+                    <div>🔐</div>
+
+                    <h3>
+                        Information Requests
+                    </h3>
+
+                    <p>
+                        Be cautious when an unexpected
+                        message asks for passwords,
+                        financial information or other
+                        sensitive data.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Navigation -->
+
+        <div class="module-navigation">
+
+            <a href="index.html"
+               class="back-button">
+
+                ← Back to Training
+
+            </a>
+
+            <button
+                onclick="goToNextModule()"
+                class="next-button">
+
+                Next Module →
+
+            </button>
+
+        </div>
+
+    </main>
+
+
+    <footer>
+
+        <div class="logo">
+            🛡️ PhishGuard
+        </div>
+
+        <p>
+            Phishing Awareness Training
+        </p>
+
+        <p class="copyright">
+            © 2026 PhishGuard | Cybersecurity Awareness Project
+        </p>
+
+    </footer>
+
+
+    <script src="js/email-phishing.js"></script>
+
+</body>
+
+</html>
